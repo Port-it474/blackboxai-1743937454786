@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subway Menu | QuickDeliver</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .menu-category.active {
+            border-bottom: 3px solid #f97316;
+            color: #f97316;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center">
+            <a href="food.html" class="mr-4">
+                <i class="fas fa-arrow-left text-gray-700"></i>
+            </a>
+            <div>
+                <h1 class="font-bold">Subway</h1>
+                <div class="flex items-center text-sm text-gray-500">
+                    <i class="fas fa-star text-yellow-400 mr-1"></i> 4.5 • 20-30 min
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu Categories -->
+    <div class="px-4 py-2 bg-white overflow-x-auto">
+        <div class="flex space-x-4">
+            <button class="menu-category active whitespace-nowrap py-2">Sandwiches</button>
+            <button class="menu-category whitespace-nowrap py-2">Salads</button>
+            <button class="menu-category whitespace-nowrap py-2">Sides</button>
+            <button class="menu-category whitespace-nowrap py-2">Drinks</button>
+        </div>
+    </div>
+
+    <!-- Menu Items -->
+    <div class="p-4">
+        <h2 class="font-bold text-lg mb-3">Sandwiches</h2>
+        <div class="space-y-4">
+            <!-- Item 1 -->
+            <div class="bg-white rounded-lg shadow p-4">
+                <div class="flex">
+                    <div class="flex-1">
+                        <h3 class="font-bold">Italian B.M.T.</h3>
+                        <p class="text-gray-600 text-sm mt-1">Pepperoni, salami and ham with your choice of veggies</p>
+                        <p class="text-orange-600 font-bold mt-2">₹199</p>
+                    </div>
+                    <div class="w-24 h-24 bg-gray-100 rounded-lg overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1600711/pexels-photo-1600711.jpeg" 
+                             alt="Italian BMT" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <button class="w-full mt-3 bg-orange-600 text-white py-2 rounded-lg font-medium">
+                    Add to Cart
+                </button>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="bg-white rounded-lg shadow p-4">
+                <div class="flex">
+                    <div class="flex-1">
+                        <h3 class="font-bold">Veggie Delite</h3>
+                        <p class="text-gray-600 text-sm mt-1">Fresh vegetables with your choice of bread</p>
+                        <p class="text-orange-600 font-bold mt-2">₹179</p>
+                    </div>
+                    <div class="w-24 h-24 bg-gray-100 rounded-lg overflow-hidden">
+                        <img src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg" 
+                             alt="Veggie Delite" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <button class="w-full mt-3 bg-orange-600 text-white py-2 rounded-lg font-medium">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Footer -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white border-t p-4">
+        <button class="w-full bg-orange-600 text-white py-3 rounded-lg font-bold">
+            View Cart (2 items) • ₹378
+        </button>
+    </div>
+
+    <script>
+        // Category switching
+        document.querySelectorAll('.menu-category').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.menu-category').forEach(b => {
+                    b.classList.remove('active');
+                });
+                btn.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
