@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - FoodExpress</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .restaurant-banner {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/3760703/pexels-photo-3760703.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        .cart-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #f97316;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <h1 class="text-2xl font-bold text-orange-600">FoodExpress</h1>
+            </a>
+            <div class="relative">
+                <a href="checkout.html" class="text-gray-700 hover:text-orange-600 relative">
+                    <i class="fas fa-shopping-cart text-2xl"></i>
+                    <span class="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Vendor Banner with Toggle -->
+    <section class="vendor-banner h-64 flex items-end" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/3760703/pexels-photo-3760703.jpeg');">
+        <div class="container mx-auto px-4 pb-6">
+            <div class="flex justify-between items-end">
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-2">Burger King</h2>
+                    <div class="flex items-center text-white">
+                        <span class="text-yellow-500 mr-1"><i class="fas fa-star"></i></span>
+                        <span class="mr-4">4.3 (1,200+)</span>
+                        <span class="mr-4"><i class="fas fa-clock mr-1"></i> 30-40 min</span>
+                        <span><i class="fas fa-rupee-sign mr-1"></i> ₹200 for two</span>
+                    </div>
+                </div>
+                <button class="bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-medium">
+                    <i class="fas fa-store mr-1"></i> View Other Vendors
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Navigation -->
+    <nav class="bg-white shadow-sm sticky top-16 z-40">
+        <div class="container mx-auto px-4">
+            <div class="flex overflow-x-auto py-3 space-x-6">
+                <a href="#recommended" class="whitespace-nowrap font-medium text-orange-600 border-b-2 border-orange-600 pb-1">Recommended</a>
+                <a href="#burgers" class="whitespace-nowrap font-medium text-gray-600 hover:text-orange-600">Burgers</a>
+                <a href="#meals" class="whitespace-nowrap font-medium text-gray-600 hover:text-orange-600">Meals</a>
+                <a href="#sides" class="whitespace-nowrap font-medium text-gray-600 hover:text-orange-600">Sides</a>
+                <a href="#desserts" class="whitespace-nowrap font-medium text-gray-600 hover:text-orange-600">Desserts</a>
+                <a href="#beverages" class="whitespace-nowrap font-medium text-gray-600 hover:text-orange-600">Beverages</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Items -->
+    <section class="py-8">
+        <div class="container mx-auto px-4">
+            <!-- Recommended Section -->
+            <div id="recommended" class="mb-12">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Recommended</h3>
+                <div class="space-y-6">
+                    <!-- Item 1 -->
+                    <div class="bg-white rounded-lg shadow-sm p-4 flex items-start">
+                        <div class="mr-4">
+                            <img src="https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg" alt="Whopper" class="w-24 h-24 object-cover rounded-lg">
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between">
+                                <h4 class="font-bold">Whopper</h4>
+                                <span class="font-bold">₹199</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-3">Our signature Whopper with flame-grilled beef patty, fresh lettuce, tomatoes, onions, pickles, and mayo</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-gray-500"><i class="fas fa-fire-alt text-orange-500 mr-1"></i> 650 kcal</span>
+                                <button class="bg-orange-600 text-white px-4 py-1 rounded-full text-sm hover:bg-orange-700 add-to-cart" data-item="Whopper" data-price="199">
+                                    ADD
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="bg-white rounded-lg shadow-sm p-4 flex items-start">
+                        <div class="mr-4">
+                            <img src="https://images.pexels.com/photos/1199957/pexels-photo-1199957.jpeg" alt="Chicken Fries" class="w-24 h-24 object-cover rounded-lg">
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between">
+                                <h4 class="font-bold">Chicken Fries</h4>
+                                <span class="font-bold">₹149</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-3">Crispy chicken fries served with BBQ dipping sauce</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-gray-500"><i class="fas fa-fire-alt text-orange-500 mr-1"></i> 320 kcal</span>
+                                <button class="bg-orange-600 text-white px-4 py-1 rounded-full text-sm hover:bg-orange-700 add-to-cart" data-item="Chicken Fries" data-price="149">
+                                    ADD
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Burgers Section -->
+            <div id="burgers" class="mb-12">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Burgers</h3>
+                <div class="space-y-6">
+                    <!-- Item 1 -->
+                    <div class="bg-white rounded-lg shadow-sm p-4 flex items-start">
+                        <div class="mr-4">
+                            <img src="https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg" alt="Whopper" class="w-24 h-24 object-cover rounded-lg">
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between">
+                                <h4 class="font-bold">Whopper</h4>
+                                <span class="font-bold">₹199</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-3">Our signature Whopper with flame-grilled beef patty, fresh lettuce, tomatoes, onions, pickles, and mayo</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-gray-500"><i class="fas fa-fire-alt text-orange-500 mr-1"></i> 650 kcal</span>
+                                <button class="bg-orange-600 text-white px-4 py-1 rounded-full text-sm hover:bg-orange-700 add-to-cart" data-item="Whopper" data-price="199">
+                                    ADD
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="bg-white rounded-lg shadow-sm p-4 flex items-start">
+                        <div class="mr-4">
+                            <img src="https://images.pexels.com/photos/1639565/pexels-photo-1639565.jpeg" alt="Chicken Whopper" class="w-24 h-24 object-cover rounded-lg">
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between">
+                                <h4 class="font-bold">Chicken Whopper</h4>
+                                <span class="font-bold">₹179</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-3">Our signature Whopper with crispy chicken patty, fresh lettuce, tomatoes, onions, pickles, and mayo</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-gray-500"><i class="fas fa-fire-alt text-orange-500 mr-1"></i> 580 kcal</span>
+                                <button class="bg-orange-600 text-white px-4 py-1 rounded-full text-sm hover:bg-orange-700 add-to-cart" data-item="Chicken Whopper" data-price="179">
+                                    ADD
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="bg-white rounded-lg shadow-sm p-4 flex items-start">
+                        <div class="mr-4">
+                            <img src="https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg" alt="Cheeseburger" class="w-24 h-24 object-cover rounded-lg">
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between">
+                                <h4 class="font-bold">Cheeseburger</h4>
+                                <span class="font-bold">₹99</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-3">Classic cheeseburger with beef patty, American cheese, ketchup, mustard, and pickles</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-gray-500"><i class="fas fa-fire-alt text-orange-500 mr-1"></i> 300 kcal</span>
+                                <button class="bg-orange-600 text-white px-4 py-1 rounded-full text-sm hover:bg-orange-700 add-to-cart" data-item="Cheeseburger" data-price="99">
+                                    ADD
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beverages Section -->
+            <div id="beverages">
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Beverages</h3>
+                <div class="space-y-6">
+                    <!-- Item 1 -->
+                    <div class="bg-white rounded-lg shadow-sm p-4 flex items-start">
+                        <div class="mr-4">
+                            <img src="https://images.pexels.com/photos/50593/coca-cola-cold-drink-soft-drink-coke-50593.jpeg" alt="Coke" class="w-24 h-24 object-cover rounded-lg">
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between">
+                                <h4 class="font-bold">Coca-Cola</h4>
+                                <span class="font-bold">₹60</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-3">Regular Coca-Cola (500ml)</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-gray-500"><i class="fas fa-fire-alt text-orange-500 mr-1"></i> 210 kcal</span>
+                                <button class="bg-orange-600 text-white px-4 py-1 rounded-full text-sm hover:bg-orange-700 add-to-cart" data-item="Coca-Cola" data-price="60">
+                                    ADD
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="bg-white rounded-lg shadow-sm p-4 flex items-start">
+                        <div class="mr-4">
+                            <img src="https://images.pexels.com/photos/96974/pexels-photo-96974.jpeg" alt="Sprite" class="w-24 h-24 object-cover rounded-lg">
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between">
+                                <h4 class="font-bold">Sprite</h4>
+                                <span class="font-bold">₹60</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mb-3">Regular Sprite (500ml)</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs text-gray-500"><i class="fas fa-fire-alt text-orange-500 mr-1"></i> 190 kcal</span>
+                                <button class="bg-orange-600 text-white px-4 py-1 rounded-full text-sm hover:bg-orange-700 add-to-cart" data-item="Sprite" data-price="60">
+                                    ADD
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">FoodExpress</h3>
+                    <p class="text-gray-400">Delicious food delivered to your doorstep</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Help & Contact</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2023 FoodExpress. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple cart functionality
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.getAttribute('data-item');
+                const price = button.getAttribute('data-price');
+                alert(`${item} added to cart! (₹${price})`);
+                
+                // Update cart badge
+                const badge = document.querySelector('.cart-badge');
+                let count = parseInt(badge.textContent);
+                badge.textContent = count + 1;
+            });
+        });
+    </script>
+</body>
+</html>
